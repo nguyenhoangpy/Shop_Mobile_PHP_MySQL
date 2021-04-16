@@ -24,6 +24,9 @@
 
   <!-- Custom CSS file -->
   <link rel="stylesheet" href="style.css">
+  <?php
+   require_once("functions.php");
+  ?>
 </head>
 
 <body>
@@ -42,7 +45,7 @@
 
     <!-- Primary Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark color-red-bg">
-      <a class="navbar-brand" href="/shop_mobile/index.php">24H Store</a>
+      <a class="navbar-brand" href="/Shop_Mobile_PHP_MySQL/index.php">24H Store</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -53,7 +56,7 @@
             <a class="nav-link" href="#">Khuyến Mãi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sản phẩm</a>
+            <a class="nav-link" href="/Shop_Mobile_PHP_MySQL/list_product.php">Sản phẩm</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
