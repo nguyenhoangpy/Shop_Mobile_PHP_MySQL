@@ -51,31 +51,6 @@ sort($unique);
           </div>
         </div>
       <?php }, $product_shuffle) ?>
-      <div class="grid-item Apple border">
-        <div class="item py-2" style="width: 200px;">
-          <div class="product font-opensans">
-            <div class="heightlabel">
-              <label class="installment color-yellow-bg">Trả góp <b>0%</b></label>
-            </div>
-            <a href="#"><img src="./assets/products/iphone-12-64gb.jpg" alt="iphone-12-64gb" class="img-fluid"></a>
-            <div class="text-center">
-              <h6 class="font-opensans">iPhone 12 64GB</h6>
-              <div class="rating text-warning font-size-12">
-                <span><i class="fas fa-star"></i></span>
-                <span><i class="fas fa-star"></i></span>
-                <span><i class="fas fa-star"></i></span>
-                <span><i class="fas fa-star"></i></span>
-                <span><i class="fas fa-star"></i></span>
-              </div>
-              <div class="price py-2">
-                <strong class="font-opensans color-red">21.990.000₫</strong>
-                <span class="font-opensans" style="text-decoration: line-through;">23.990.000₫</span>
-              </div>
-              <button type="submit" class="btn btn-warning font-size-12">Mua hàng</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
