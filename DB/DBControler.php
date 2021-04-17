@@ -1,9 +1,9 @@
 <?php
-// $host = 'localhost';
-// $username = 'root';
-// $password = '';
-// $database = '24hstore';
-// $connection = mysqli_connect($host, $username, $password, $database);
+    $host = 'localhost';
+    $username = 'root';
+    $password = '';
+    $database = '24hstore';
+    $connection = mysqli_connect($host, $username, $password, $database);
 // if(!$connection){
 //     die("Failed".mysqli_connect_error());
 // }
@@ -11,14 +11,15 @@
 
 class DBControler
 {
-    protected $host = 'localhost';
-    protected $username = 'root';
-    protected $password = '';
-    protected $database = '24hstore';
-    public $connection = null;
+    // protected $host = 'localhost';
+    // protected $username = 'root';
+    // protected $password = '';
+    // protected $database = '24hstore';
+    // public $connection = null;
     public function __construct()
     {
-        $this->connection = mysqli_connect($this->host, $this->username, $this->password, $this->database);
+        global $connection;
+        $this->connection = $connection;
         if ($this->connection->connect_error) {
             echo "Fail" . $this->connec_error;
         }
@@ -37,5 +38,6 @@ class DBControler
             $this->connection = null;
         }
     }
-    
 }
+$db = new DBControler();
+?>

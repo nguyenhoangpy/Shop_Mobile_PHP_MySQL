@@ -21,8 +21,10 @@
   <!-- Custom CSS file -->
   <link rel="stylesheet" href="style.css">
   <?php
-  require_once("functions.php");
-  session_start();
+  require_once("./DB/DBControler.php");
+  require_once("./DB/Product.php");
+  require_once("./DB/AccounControler.php");
+  // session_start();
   error_reporting(0);
   ?>
 </head>
@@ -58,7 +60,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav m-auto font-opensans">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Khuyến Mãi</a>
+            <a class="nav-link" href="/Shop_Mobile_PHP_MySQL/list_product_sale.php">Khuyến Mãi</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/Shop_Mobile_PHP_MySQL/list_product.php">Sản phẩm</a>
@@ -68,9 +70,9 @@
               Danh Mục
             </a>
             <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item color-red" href="#">Apple</a>
-              <a class="dropdown-item color-red" href="#">Samsung</a>
-              <a class="dropdown-item color-red" href="#">Xiaomi</a>
+              <a class="dropdown-item color-red" href="#">Smartphone</a>
+              <a class="dropdown-item color-red" href="#">Laptop</a>
+              <a class="dropdown-item color-red" href="#">Phụ kiện</a>
             </div>
           </li>
           <!-- <li class="nav-item">

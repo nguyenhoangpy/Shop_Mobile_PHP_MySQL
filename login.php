@@ -1,24 +1,6 @@
 <?php
 require_once("./DB/DBControler.php");
-?>
-<?php
-session_start();
-$connection = mysqli_connect('localhost', 'root', '', '24hstore');
-if (isset($_POST['submit'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $sql = "select * from user where email='$email' and password='$password'";
-    $result = mysqli_query($connection, $sql);
-    if ($result->num_rows > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['userid'] = $row['user_id'];
-        $_SESSION['fullname'] = $row['full_name'];
-        header("Location: index.php");
-        // echo "welcome " . $_SESSION['fullname'];
-    } else {
-        echo "<div class='alert alert-danger' role='alert'>Đăng nhập thất bại!</div>";
-    }
-}
+require_once("./DB/AccounControler.php");
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +58,7 @@ if (isset($_POST['submit'])) {
                 <a href="/Shop_Mobile_PHP_MySQL/index.php" class="color-red">Về trang chủ</a>
             </div>
             <div class="col-5">
-                <form action="" method="POST">
+                <form action="login.php" method="POST" autocomplete="off">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email:</label>
                         <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nhập email">
@@ -86,7 +68,8 @@ if (isset($_POST['submit'])) {
                         <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu">
                     </div>
                     <div class="form-group">
-                        <button type="submit" name="submit" class="btn btn-blue">Đăng nhập</button>
+                        <input type="submit" name="login" class="btn btn-blue" value="Đăng nhập">
+                        <input type="submit" name="forgotpwd" class="btn btn-blue" value="Quên mật khẩu">
                     </div>
                     <div class="form-group">
                         <small>Bạn chưa có tài khoản? <a href="signup.php">Đăng ký ngay</a></small>

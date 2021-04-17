@@ -1,5 +1,5 @@
 <?php
-$product_shuffle = $product->getData();
+$product_shuffle = $product->getData_sale();
 $brand = array_map(function ($product) {
     return $product['item_brand'];
 }, $product_shuffle);
@@ -9,7 +9,12 @@ sort($unique);
 <!-- Special Price -->
 <section id="special-price">
     <div class="container">
-        <h4 class="font-opensans font-size-20">ĐIỆN THOẠI</h4>
+        <p class="mb-0">
+            <strong class="d-flex align-items-center">
+                <img class="cpslazy loaded" data-src="https://cellphones.com.vn/media/icon/flash.gif" data-ll-status="loaded" src="https://cellphones.com.vn/media/icon/flash.gif">
+                <label class="font-opensans font-size-20 color-red">HOT SALES</label>
+            </strong>
+        </p>
         <div id="filters" class="button-group text-right font-opensans font-size-16">
             <button class="btn is-checked btn-danger" data-filter="*">Tất cả</button>
             <?php
@@ -38,8 +43,8 @@ sort($unique);
                                     <span><i class="fas fa-star"></i></span>
                                 </div>
                                 <div class="price py-2">
-                                    <strong class="font-opensans color-red"><?php echo (int)$item['item_price'] ?? 0 ?>đ</strong>
-                                    <!-- <span class="font-opensans" style="text-decoration: line-through;">33.990.000₫</span> -->
+                                    <strong class="font-opensans color-red"><?php echo (int)$item['item_price_sale'] ?? 0 ?>đ</strong>
+                                    <span class="font-opensans" style="text-decoration: line-through;"><?php echo (int)$item['item_price_old'] ?? 0 ?>đ</span>
                                 </div>
 
                                 <button type="submit" class="btn btn-warning font-size-12">Mua hàng</button>

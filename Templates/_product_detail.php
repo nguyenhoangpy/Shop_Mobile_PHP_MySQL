@@ -8,7 +8,7 @@ foreach ($product->getData_sale() as $item):
         <div class="row">
             <div class="col-sm-6">
                 <img src="<?php echo $item['item_image'] ?? $item['item_image']?>" alt="product" class="img-fluid">
-                    <a href="#"">Xem ảnh 360 độ sản phẩm</a>                            
+                    <a href="#">Xem ảnh 360 độ sản phẩm</a>                            
             </div>
             <div class="col-sm-6 py-5">
                 <h5 class="font-opensans font-size-20"><?php echo $item['item_name'] ?? $item['item_name']?></h5>

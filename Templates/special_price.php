@@ -14,7 +14,7 @@ sort($unique);
       <!-- <button class="btn is-checked btn-danger" data-filter="*">Tất cả</button> -->
       <?php
       array_map(function ($brand) {
-        echo "  <a class='btn btn-default btn-sm font-opensans font-size-16'  data-filter='.$brand'>$brand</a>";
+        echo "  <button class='btn btn-danger' data-filter='.$brand'>$brand</button>";
       }, $unique);
       ?>
       <a href="/Shop_Mobile_PHP_MySQL/list_product.php" class="btn btn-default btn-sm font-opensans color-red font-size-16">Xem tất cả điện thoại</a>
@@ -28,7 +28,7 @@ sort($unique);
               <div class="heightlabel">
                 <label class="installment color-yellow-bg">Trả góp <b>0%</b></label>
               </div>
-              <a href="#"><img src="<?php echo $item['item_image'] ?? "./assets/products/samsung-galaxy-s21-5g.jpg"; ?>" alt="samsung-galaxy-s21-5g" class="img-fluid"></a>
+              <a href="/Shop_Mobile_PHP_MySQL/product_detail.php?item_id=<?php echo $item['item_id'] ?>"><img src="<?php echo $item['item_image'] ?? "./assets/products/samsung-galaxy-s21-5g.jpg"; ?>" alt="samsung-galaxy-s21-5g" class="img-fluid"></a>
               <div class="text-center">
                 <h6 class="font-opensans"><?php echo $item['item_name'] ?? "Unknown"; ?></h6>
                 <div class="rating text-warning font-size-12">

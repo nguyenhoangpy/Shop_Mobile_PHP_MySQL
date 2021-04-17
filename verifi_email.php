@@ -2,7 +2,12 @@
 require_once("./DB/DBControler.php");
 require_once("./DB/AccounControler.php");
 ?>
-
+<?php
+$email = $_SESSION['email'];
+if ($email == false) {
+    header('Location: login.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +15,7 @@ require_once("./DB/AccounControler.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký</title>
+    <title>Xác nhận đăng ký</title>
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -52,32 +57,13 @@ require_once("./DB/AccounControler.php");
                 <a href="/Shop_Mobile_PHP_MySQL/index.php" class="color-red">Về trang chủ</a>
             </div>
             <div class="col-5">
-                <form action="" method="POST">
+                <form action="" method="POST" autocomplete="off">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email:</label>
-                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nhập email">
+                        <label for="exampleInputEmail1">Mã xác nhận đăng ký:</label>
+                        <input type="number" name="otp" class="form-control" id="exampleOTPEmail1" aria-describedby="emailHelp" placeholder="Nhập mã xác nhận">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputFullname1">Họ và tên:</label>
-                        <input type="text" name="fullname" class="form-control" id="exampleInputFullname1" placeholder="Họ và tên">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPhone1">Số điện thoại:</label>
-                        <input type="number" name="phone" class="form-control" id="exampleInputPhone1" placeholder="Điện thoại">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Mật khẩu:</label>
-                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputRePassword1">Xác nhận mật khẩu:</label>
-                        <input type="password" name="repassword" class="form-control" id="exampleInputRePassword1" placeholder="Xác nhận mật khẩu">
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" name="signup" class="btn btn-blue">Đăng ký</button>
-                    </div>
-                    <div class="form-group">
-                        <small>Bạn đã có tài khoản? <a href="login.php">Đăng nhập</a></small>
+                        <input type="submit" name="checkcode_signup" class="btn btn-blue text-center" value="Xác minh tài khoản">
                     </div>
                 </form>
             </div>
