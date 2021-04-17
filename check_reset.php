@@ -54,7 +54,7 @@ if ($email == false) {
     <div class="container">
         <div class="row">
             <div class="col">
-                <a href="/Shop_Mobile_PHP_MySQL/index.php" class="color-red">Về trang chủ</a>
+                <!-- <a href="/Shop_Mobile_PHP_MySQL/index.php" class="color-red">Về trang chủ</a> -->
             </div>
             <div class="col-5">
                 <form action="" method="POST" autocomplete="off">

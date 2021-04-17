@@ -54,7 +54,7 @@ if ($email == false) {
     <div class="container">
         <div class="row">
             <div class="col">
-                <a href="/Shop_Mobile_PHP_MySQL/index.php" class="color-red">Về trang chủ</a>
+                <!-- <a href="/Shop_Mobile_PHP_MySQL/index.php" class="color-red">Về trang chủ</a> -->
             </div>
             <div class="col-5">
                 <form action="" method="POST" autocomplete="off">
@@ -67,7 +67,7 @@ if ($email == false) {
                         <input type="password" name="repassword" class="form-control" id="exampleInputRePassword1" placeholder="Xác nhận mật khẩu mới">
                     </div>
                     <div class="form-group">
-                        <input type="submit" name="checkcode_signup" class="btn btn-blue" value="Xác minh tài khoản">
+                        <input type="submit" name="change-password" class="btn btn-blue" style="text-align: center;" value="Xác minh tài khoản">
                     </div>
                 </form>
             </div>

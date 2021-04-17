@@ -20,8 +20,7 @@ require_once("./DB/AccounControler.php");
 
     <!-- font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="style.css">
@@ -55,7 +54,7 @@ require_once("./DB/AccounControler.php");
     <div class="container">
         <div class="row">
             <div class="col">
-                <a href="/Shop_Mobile_PHP_MySQL/index.php" class="color-red">Về trang chủ</a>
+                <!-- <a href="/Shop_Mobile_PHP_MySQL/index.php" class="color-red">Về trang chủ</a> -->
             </div>
             <div class="col-5">
                 <form action="login.php" method="POST" autocomplete="off">
@@ -68,8 +67,11 @@ require_once("./DB/AccounControler.php");
                         <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu">
                     </div>
                     <div class="form-group">
-                        <input type="submit" name="login" class="btn btn-blue" value="Đăng nhập">
-                        <input type="submit" name="forgotpwd" class="btn btn-blue" value="Quên mật khẩu">
+                        <small><a href="/Shop_Mobile_PHP_MySQL/forgot_pwd.php">Quên mật khẩu</a></small>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="login" class="btn btn-primary" value="Đăng nhập">
+                        <!-- <input type="submit" name="forgotpwd" class="btn btn-blue" value="Quên mật khẩu"> -->
                     </div>
                     <div class="form-group">
                         <small>Bạn chưa có tài khoản? <a href="signup.php">Đăng ký ngay</a></small>
@@ -87,3 +89,6 @@ require_once("./DB/AccounControler.php");
 
     </div>
     <br>
+
+
+

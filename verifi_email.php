@@ -54,7 +54,7 @@ if ($email == false) {
     <div class="container">
         <div class="row">
             <div class="col">
-                <a href="/Shop_Mobile_PHP_MySQL/index.php" class="color-red">Về trang chủ</a>
+                <!-- <a href="/Shop_Mobile_PHP_MySQL/index.php" class="color-red">Về trang chủ</a> -->
             </div>
             <div class="col-5">
                 <form action="" method="POST" autocomplete="off">
@@ -63,7 +63,7 @@ if ($email == false) {
                         <input type="number" name="otp" class="form-control" id="exampleOTPEmail1" aria-describedby="emailHelp" placeholder="Nhập mã xác nhận">
                     </div>
                     <div class="form-group">
-                        <input type="submit" name="checkcode_signup" class="btn btn-blue text-center" value="Xác minh tài khoản">
+                        <input type="submit" name="checkcode_signup" class="btn btn-blue" style="text-align: center;" value="Xác minh tài khoản">
                     </div>
                 </form>
             </div>
