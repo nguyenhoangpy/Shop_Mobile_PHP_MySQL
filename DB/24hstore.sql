@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 16, 2021 lúc 07:31 PM
+-- Thời gian đã tạo: Th4 17, 2021 lúc 05:35 PM
 -- Phiên bản máy phục vụ: 10.4.17-MariaDB
 -- Phiên bản PHP: 8.0.2
 
@@ -57,7 +57,7 @@ INSERT INTO `product` (`item_id`, `item_brand`, `item_name`, `item_price`, `item
 (2, 'Samsung', 'Samsung Galaxy S21 5G', 20990000.00, './assets/products/samsung-galaxy-s21-5g.jpg', '2020-03-28 11:08:57'),
 (3, 'Samsung', 'Samsung Galaxy A72', 11490000.00, './assets/products/samsung-galaxy-a72.jpg', '2020-03-28 11:08:57'),
 (4, 'Samsung', 'Samsung Galaxy S21 Ultra', 30990000.00, './assets/products/samsung-galaxy-s21-ultra.jpg', '2020-03-28 11:08:57'),
-(5, 'Samsung', 'Samsung Galaxy Note 20 Ultra', 32990000.00, './assets/products/sam-sung-note-20-ultra.jpg', '2020-03-28 11:08:57'),
+(5, 'Samsung', 'Samsung Galaxy Note 20', 32990000.00, './assets/products/sam-sung-note-20-ultra.jpg', '2020-03-28 11:08:57'),
 (6, 'Apple', 'iPhone XR 64GB', 13490000.00, './assets/products/iphone-xr.jpg', '2020-03-28 11:08:57'),
 (7, 'Apple', 'iPhone 12 Pro 512GB', 38990000.00, './assets/products/iphone-12-pro.jpg', '2020-03-28 11:08:57'),
 (8, 'Apple', 'iPhone 12 64GB', 23990000.00, './assets/products/iphone-12-64gb.jpg', '2020-03-28 11:08:57'),
@@ -122,7 +122,7 @@ INSERT INTO `product_special` (`item_id`, `item_brand`, `item_name`, `item_price
 (2, 'Samsung', 'Samsung Galaxy S21 5G', 20990000.00, './assets/products/samsung-galaxy-s21-5g.jpg', '2020-03-28 11:08:57'),
 (3, 'Samsung', 'Samsung Galaxy A72', 11490000.00, './assets/products/samsung-galaxy-a72.jpg', '2020-03-28 11:08:57'),
 (4, 'Samsung', 'Samsung Galaxy S21 Ultra', 30990000.00, './assets/products/samsung-galaxy-s21-ultra.jpg', '2020-03-28 11:08:57'),
-(5, 'Samsung', 'Samsung Galaxy Note 20 Ultra', 32990000.00, './assets/products/sam-sung-note-20-ultra.jpg', '2020-03-28 11:08:57'),
+(5, 'Samsung', 'Samsung Galaxy Note 20', 32990000.00, './assets/products/sam-sung-note-20-ultra.jpg', '2020-03-28 11:08:57'),
 (6, 'Apple', 'iPhone XR 64GB', 13490000.00, './assets/products/iphone-xr.jpg', '2020-03-28 11:08:57'),
 (7, 'Apple', 'iPhone 12 Pro 512GB', 38990000.00, './assets/products/iphone-12-pro.jpg', '2020-03-28 11:08:57'),
 (8, 'Apple', 'iPhone 12 64GB', 23990000.00, './assets/products/iphone-12-64gb.jpg', '2020-03-28 11:08:57'),
@@ -139,18 +139,23 @@ INSERT INTO `product_special` (`item_id`, `item_brand`, `item_name`, `item_price
 
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
-  `first_name` varchar(100) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
-  `register_date` datetime DEFAULT NULL
+  `full_name` varchar(100) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `code` int(6) NOT NULL,
+  `phone` varchar(10) NOT NULL,
+  `status` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `user`
 --
 
-INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `register_date`) VALUES
-(1, 'Daily', 'Tuition', '2020-03-28 13:07:17'),
-(2, 'Akshay', 'Kashyap', '2020-03-28 13:07:17');
+INSERT INTO `user` (`user_id`, `full_name`, `password`, `email`, `code`, `phone`, `status`) VALUES
+(1, 'Daily', '123', 'admin@gmail.com', 0, '123', ''),
+(2, 'Akshay', '123', 'Kashyap', 0, '12', ''),
+(3, 'abc', '123', 'abc@gmail.com', 0, '1234', ''),
+(27, 'thuy nguyen', '123', 'thuynguyenminh039@gmail.com', 0, '1234', 'verified');
 
 -- --------------------------------------------------------
 
@@ -218,7 +223,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
