@@ -42,7 +42,7 @@ if ($email == false) {
                 <!-- <a href="#" class="px-3 border-right text-dark">Whishlist (0)</a> -->
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-dark color-red-bg">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-nav">
             <a class="navbar-brand" href="/Shop_Mobile_PHP_MySQL/index.php">24H Store</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

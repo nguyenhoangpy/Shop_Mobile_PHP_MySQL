@@ -165,6 +165,14 @@ button, button:focus {
   background-color: #1A237E
 }
 
+.bg-nav{
+  background-image: linear-gradient(
+              to right,
+              #D73350,
+              #FC6F69
+            );
+}
+
 
 
 
