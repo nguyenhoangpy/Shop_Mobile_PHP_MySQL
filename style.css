@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Raleway&family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 /*              Sass Template           */
 /*  global classes  */
 button, button:focus {
@@ -77,6 +78,11 @@ button, button:focus {
   background: #bb0c23;
 }
 
+.color-bluesky-bg{
+  background: #054099;
+}
+
+
 /*  top sale template   */
 #top-sale .owl-carousel .item .product a {
   overflow: hidden;
@@ -115,6 +121,48 @@ button, button:focus {
 #special-price .grid .grid-item {
   margin-right: 1.2rem;
   margin-top: 1rem;
+}
+
+
+
+.text-viewimage{
+  color: #666;
+  font-size: 14px;
+  display: block;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+
+
+.facebook {
+  background-color: #3b5998;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer
+}
+
+.btn-blue {
+  background-color: #1A237E;
+  width: 150px;
+  color: #fff;
+  border-radius: 2px
+}
+
+.btn-blue:hover {
+  background-color: rgb(8, 117, 206);
+  cursor: pointer
+}
+
+.bg-blue {
+  color: #fff;
+  background-color: #1A237E
 }
 
 /*# sourceMappingURL=style.css.map */
