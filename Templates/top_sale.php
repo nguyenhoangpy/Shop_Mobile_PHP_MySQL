@@ -21,7 +21,7 @@
               <div class="heightlabel">
                 <label class="installment color-yellow-bg">Trả góp <b>0%</b></label>
               </div>
-              <a href="#"><img src="<?php echo $item['item_image']?? "../assets/products/iphone-12promax128gb.jpg" ?>" alt="iphone-12promax128gb"
+              <a href="/Shop_Mobile_PHP_MySQL/product_detail.php?item_id=<?php echo $item['item_id'] ?>"><img src="<?php echo $item['item_image']?? "../assets/products/iphone-12promax128gb.jpg" ?>" alt="iphone-12promax128gb"
                   class="img-fluid"></a>
               <div class="text-center">
                 <h6 class="font-opensans"><?php echo $item['item_name']?? "Unknown"; ?></h6>
@@ -33,10 +33,10 @@
                   <span><i class="far fa-star"></i></span>
                 </div>
                 <div class="price py-2">
-                  <strong class="font-opensans color-red"><?php echo (int)$item['item_price_sale']?? 0?></strong>
-                  <span class="font-opensans" style="text-decoration: line-through;"><?php echo (int)$item['item_price_old']?? 0 ?></span>
+                  <strong class="font-opensans color-red"><?php echo (int)$item['item_price_sale']?? 0?>đ</strong>
+                  <span class="font-opensans" style="text-decoration: line-through;"><?php echo (int)$item['item_price_old']?? 0 ?>đ</span>
                 </div>
-                <button type="submit" class="btn btn-warning font-size-12">Mua hàng</button>
+                <button type="submit" class="btn btn-warning btn-rounded font-size-12">Mua hàng</button>
               </div>
             </div>
           </div>

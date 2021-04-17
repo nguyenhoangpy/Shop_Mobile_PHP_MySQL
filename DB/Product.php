@@ -1,7 +1,6 @@
 <?php
 class Product{
-    public $db = null;
-    public function __construct(DBControler $db){
+    public function __construct($db){
         if(!isset($db->connection)) return null;
         $this->db = $db;
     }
@@ -32,4 +31,5 @@ class Product{
         return $resultArray;
     }
 }
+$product = new Product($db);
 ?>
