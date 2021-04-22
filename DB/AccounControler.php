@@ -82,7 +82,7 @@ if (isset($_POST['checkcode_signup'])) {
 if (isset($_POST['login'])) {
     $email = mysqli_real_escape_string($connection, $_POST['email']);
     $password = mysqli_real_escape_string($connection, $_POST['password']);
-    $check_email = "SELECT * FROM user WHERE email = '$email'";
+    $check_email = "SELECT * FROM user WHERE email = '$email' and password='$password'";
     $res = mysqli_query($connection, $check_email);
     if ($res->num_rows > 0) {
         $fetch = mysqli_fetch_assoc($res);
